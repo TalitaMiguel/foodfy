@@ -1,0 +1,20 @@
+{% extends "layouts/admin.njk" %}
+
+{% block content %}
+
+    <section class="user-register">
+        <form method="POST" action="/admin/users/">
+            <div class="wrapper">
+                <h1>Criar Usuário</h1>
+                <button type="submit" class="btnSalvar">Salvar</button>
+            </div>
+            
+            <div class="fields">
+                {% include 'parts/create-user.njk' %}
+            </div>
+            
+        </form>
+    </section>
+
+{% endblock content %}
+

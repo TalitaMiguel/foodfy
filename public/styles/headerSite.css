@@ -1,0 +1,57 @@
+.headerSite {
+    width: 100%;
+    background: rgba(252,233,230,.8);
+    box-shadow: 3px 1px 6px -4px var(--black-color);
+}
+.headerSite .container {
+    width: 1024px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.headerSite .logoSite img {
+    width: 90px;
+    height: 27px;
+    padding: 6px;
+}
+
+.headerSite .links {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.headerSite .links a + a {
+    margin-left: 32px;
+}
+
+.headerSite .links a {
+    text-decoration: none;
+    color: var(--black-color);
+    position: relative;
+}
+
+.headerSite .links a:hover {
+    color: var(--gray-color);
+}
+
+.headerSite .links a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--gray-color);
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+.headerSite .links a:hover::after {
+    width: 100%;
+    transition: width 200ms ease-in-out;
+}
+
+.headerSite .links a.selected {
+    font-weight: 900;
+}

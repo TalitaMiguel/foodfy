@@ -1,0 +1,30 @@
+:root {
+    --color-red-light: tomato;
+    --gray-color: #777;
+    --gray-light-color: #DDDDDD;
+    --red-color: #DC4747;
+    --purple-color: #6558C3;
+    --green-color: #7BE091;
+    --white-color: #fff;
+    --black-color: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+} 
+
+/**** validate errors ****/
+.input .error {
+    color: var(--red-color);
+    text-align: center;
+}

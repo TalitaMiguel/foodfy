@@ -1,0 +1,88 @@
+{% extends "layouts/admin.njk" %}
+
+{% block content %}
+    <section class="details">
+        <div class="wrapper-show">
+            <h1>Receita: {{recipe.title}}</h1>
+            {% if userAdmin.userAdmin == true or recipe.user_id == userAdmin.userId %}
+                <a href="/admin/recipes/{{ recipe.id }}/edit" class="btnEditar">Editar receita</a>
+            {% endif %}
+        </div>
+
+        <div class="gallery">
+            <div class="highlight">
+                {% if not recipe.files[0] %}
+                    <img src="http://placehold.it/400x400?text=PRODUTO SEM FOTO" />
+                {% else %}
+                    <img 
+                        src="{{recipe.files[0].src}}" 
+                        alt="{{recipe.files[0].name}}" 
+                        onclick="Lightbox.open()"
+                    >
+                {% endif %}
+
+                <div class="lightbox-target">
+                    <img src="{{recipe.files[0].src}}" alt="{{recipe.files[0].name}}">
+                    <a href="#" class="lightbox-close" onclick="Lightbox.close()">
+                        <i class="material-icons">close</i>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery-preview">
+                {% for image in recipe.files %}
+                    <img 
+                        src="{{image.src}}" 
+                        alt="{{image.name}}"
+                        {% if loop.index0 == 0 %}
+                            class="active"
+                        {% endif %}
+                        onclick="ImageGallery.setImage(event)"
+                    >
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="card__detail">
+            <div class="card-detail-title">
+                <p>{{recipe.title}}</p>
+            </div>
+            <div class="card-detail-author">
+                <p>por {{recipe.author}}</p>
+            </div>
+        </div>
+
+        <div class="detail-ingredients">
+            <h2>Ingredientes</h2>
+            <div>
+                <ul> 
+                    {% for recipe in recipe.ingredients %}
+                        <li>{{recipe}}</li>
+                    {% endfor %}
+                </ul>
+            </div>   
+        </div>
+
+        <div class="detail-preparation">
+            <h2>Modo de preparo</h2>
+            <div>
+                <ul>
+                    {% for preparation in recipe.preparation %}
+                        <li> {{preparation}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="detail-information">
+            <h2>Informações adicionais</h2>
+            <div>
+                <p>{{recipe.information}}</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="/scripts/imageGallery.js"></script>
+
+{% endblock %}
+    

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FOODFY</title>
+        {% include "parts/styles.njk" %}
+    </head>
+
+    <body>
+
+        <header class="headerSession">
+            <div class="logoSite">
+                <a href="/"><img src="../../images/logo.png" alt="Logo Foodfy"></a>
+            </div>
+        </header>
+
+        {% include "parts/messages.njk" %}
+
+        {% block content %}{% endblock %}
+
+    </body>
+    
+    <script src="/scripts/scripts.js"></script>
+    
+</html>

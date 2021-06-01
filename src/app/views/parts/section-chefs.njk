@@ -1,0 +1,28 @@
+{% macro chefs(name, classes, chefs) %}
+
+   <section>
+        <div class="cards-chefs">
+            {% for chef in chefs%}
+                <div class="card-chef" id="{{chef.id}}">
+                    <img src="{{ chef.img }}" alt="{{chef.name}}">
+
+                    <div class="card-author-chef">
+                        <h1>{{ chef.name }}</h1>
+                        <p>
+                            {{ chef.total_recipes }}
+                            {% if chef.total_recipes <= 1 %}
+                                receita
+                            {% else %}
+                                receitas
+                            {% endif %}
+                        </p>
+                        {% if name %}
+                            <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endmacro %}

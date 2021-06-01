@@ -1,0 +1,24 @@
+{% extends "layouts/admin.njk" %}
+
+{% block content %}
+
+    <section class="user-register">
+        <form method="POST" action="/admin/profile?_method=PUT">
+
+            <div class="wrapper">
+                <h1>Bem vindo(a) {{user.name}}</h1>
+                <button type="submit" class="btnSalvar">Atualizar</button>
+            </div>
+            
+            <div class="fields">
+                {% include 'admin/users/fields.njk' %}
+                <input 
+                    type="hidden" 
+                    name="id" 
+                    value={{user.id}}
+                >
+            </div>
+        </form>
+    </section>
+
+{% endblock content %}

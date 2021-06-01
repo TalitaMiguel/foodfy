@@ -1,0 +1,51 @@
+{% macro recipes(name, classes, recipes) %}
+
+    {% if name %}
+
+        <section class="cards">
+            {% for recipe in recipes %}
+
+                <div class="card" id="{{recipe.id}}">
+                    <a href="/site/recipes/{{recipe.id}}">
+                        <div class="card-image-container">
+                            <img src="{{recipe.img}}" alt="Receita {{recipe.title}}">
+                        </div>
+                    </a>
+                    <div class="{{classes}}">
+                        <div class="card-title-container">
+                            <p>{{recipe.title}}</p>
+                        </div>
+                        <div class="card-author-container">
+                            <p>por {{recipe.author}}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        </section>
+
+    {% else %}
+
+        <section class="cards-list">
+            {% for recipe in recipes %}
+                <div class="card-adm" id="{{recipe.id}}">
+                    <div class="card-image">
+                        <img src="{{recipe.img}}" alt="Receita {{recipe.title}}">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title">
+                            <p>{{recipe.title}}</p>
+                        </div>
+                        <div class="card-author">
+                            <p>por {{recipe.author}}</p>
+                        </div>
+                    
+                        <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+                    </div>
+                </div>   
+            {% endfor %}
+        </section>
+
+    {% endif %}
+
+{% endmacro %}

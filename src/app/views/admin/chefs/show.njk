@@ -1,0 +1,49 @@
+{% extends 'layouts/admin.njk' %}
+{% import "parts/section-recipes.njk" as section %}
+
+{% block head %}
+    <title>FOODFY</title>
+{% endblock %}
+
+{% block content %}
+    <section class="show-Chef">
+        <div class="wrapper">
+            <h1>Chef: {{chef.name}}</h1>
+            {% if userAdmin.userAdmin == true %}
+                <a href="/admin/chefs/{{ chef.id }}/edit" class="btnEditar">Editar chef</a>
+            {% endif %}
+        </div>
+        
+        <div class="details" id="{{chef.id}}">
+            <img 
+                src="{{ chef.files[0].src}}"
+                alt="{{ chef.name }}" 
+            >
+
+            <div class="author">
+                <h1>{{ chef.name }}</h1>
+                <p>
+                    {{ recipes.length }}
+                    {% if recipes.length <= 1 %}
+                        receita
+                    {% else %}
+                        receitas
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+
+        {% if recipes.length == 0 %}   
+            <div class="wrapper">
+                <h3>Chef {{ chef.name }} não possui receitas cadastradas.</h3>
+            </div>
+        {% else %}
+            <div class="wrapper">
+                <h1>Receitas</h1>
+            </div>
+            {{section.recipes('', 'card-info-container', recipes)}}
+        {% endif %}
+        
+    </section>
+    
+{% endblock content %}

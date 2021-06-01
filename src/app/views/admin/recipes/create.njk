@@ -1,0 +1,16 @@
+{% extends "layouts/admin.njk" %}
+
+{% block content %}
+
+    <form method="POST" action="/admin/recipes" enctype="multipart/form-data">
+        <div class="wrapper">
+            <h1>Criando receita</h1>
+            <button type="submit" class="btnSalvar">Salvar receita</button>
+        </div>
+        
+        {% include 'admin/recipes/fields.njk' %}
+        
+    </form>
+
+{% endblock content %}
+

@@ -1,0 +1,35 @@
+{% extends "layouts/site.njk" %}
+{% import "parts/section-recipes.njk" as section %}
+
+{% block header %}
+    <div class="search">
+        <form action="/search" method="GET">
+            <input 
+                type="text"
+                name="filter"
+                placeholder="Buscar uma receita"
+            >
+            <button type="submit" class="btnEnviar">Buscar</button>
+        </form>
+    </div>
+    
+{% endblock %}
+
+{% block content %}
+    <div id="wrapper">
+        <div>
+            <h1>As melhores receitas</h1>
+            <p>
+                Aprenda a construir os melhores pratos
+                com receitas criadas por profissionais
+                do mundo inteiro.
+            </p>
+        </div>
+        <img src="/images/chef.png" alt="Chef">
+    </div>
+    
+    <h2>Mais acessadas</h2>
+    
+    {{section.recipes('site', 'card-info-container', recipes)}}
+        
+{% endblock %}

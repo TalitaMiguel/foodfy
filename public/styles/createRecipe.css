@@ -1,0 +1,93 @@
+/* === ADMIN - CREATE RECIPE=== */
+
+.wrapper {
+    width: 1024px;
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    height: 30px;
+}
+
+.wrapper h1 {
+    font-size: 24px;
+    color: var(--black-color);
+    align-self: center;
+}
+
+.wrapper a {
+    width: 80px;
+    font-size: 16px;
+    color: var(--white-color);
+    background: var(--purple-color);
+    border-radius: 4px; 
+    justify-self: flex-end;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.btnSalvar {
+    width: 120px;
+    height: 30px;
+    font-size: 16px;
+    color: var(--white-color);
+    background: var(--purple-color);
+    border-radius: 4px; 
+    justify-self: flex-end;
+}
+
+.form-create .item h3 {
+    font-size: 16px;
+    color: var(--black-color);
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.form-create .item input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 5px;
+    background: var(--white-color);
+    border: 1px solid var(--gray-light-color);
+    border-radius: 4px;
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-create .item select {
+    width: 100%;
+    padding: 13px 9px;
+    background: var(--white-color);
+    border: 1px solid var(--gray-light-color);
+    border-radius: 4px;
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-create .item option:disabled {
+    color: #777 !important;
+}
+
+.form-create .add-ingredient,
+.form-create .add-preparation {
+    font-size: 15px;
+    color: var(--purple-color);
+    margin-bottom: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--white-color);
+    outline: none;
+}
+
+.form-create .item textarea {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    background: var(--white-color);
+    border: 1px solid var(--gray-light-color);
+    border-radius: 4px;
+}

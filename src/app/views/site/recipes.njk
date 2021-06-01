@@ -1,0 +1,9 @@
+{% extends "layouts/site.njk" %}
+{% import "parts/section-recipes.njk" as section %}
+
+{% block content %}
+
+    {{section.recipes('site', 'card-info-container', recipes)}}
+
+{% endblock content %}
+    

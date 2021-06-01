@@ -1,0 +1,39 @@
+/* === CHEF CREATE === */
+
+.form-create .item #avatar_upload {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 240px;
+    height: 80px;
+    margin-right: 8px;
+}
+
+.form-create .item #avatar-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form-create .item #avatar_upload p {
+    border-radius: 6px;
+    color: var(--white-color);
+    background: var(--purple-color);
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.form-create .item .input-create {
+    color: var(--gray-color);
+}

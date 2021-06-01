@@ -1,0 +1,49 @@
+/* === PAGE NOT FOUND === */
+
+.notFound {
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+.notFound .notFoundImg {
+    width: 100%;
+    min-height: 80vh;
+    background-image: url('../images/astronaut.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: fill;
+    position: absolute;
+}
+
+.wavy {
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 80px;
+    align-items: center;
+    z-index: 2;
+    color: var(--white-color);
+}
+
+.wavy  span {
+    font-size: 3rem;
+    position: relative;
+    display: inline-block;
+    animation: animate 3s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+    animation-play-state: paused;
+}
+
+.wavy:hover  span {
+    animation-play-state: running;
+}
+
+@keyframes animate {
+    0%, 40%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-50px);
+    }
+}

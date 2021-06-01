@@ -1,0 +1,16 @@
+{% extends 'layouts/admin.njk' %}
+
+{% block head %}
+    <title>FOODFY</title>
+{% endblock %}
+
+{% block content %}
+    <form method="POST" action="/admin/chefs" enctype="multipart/form-data">
+        <div class="wrapper">
+            <h1>Criando Chef</h1>
+            <button type="submit" class="btnSalvar">Salvar chef</button>
+        </div>
+
+        {% include 'admin/chefs/fields.njk' %}
+    </form>
+{% endblock content %}

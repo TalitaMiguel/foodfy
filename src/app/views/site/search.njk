@@ -1,0 +1,26 @@
+{% extends "layouts/site.njk" %}
+{% import "parts/section-recipes.njk" as section %}
+
+{% block header %}
+    <div class="search">
+        <form action="/search" method="GET">
+            <input 
+                type="text"
+                name="filter"
+                placeholder="Buscar uma receita"
+                value="{{filter}}"
+            >
+            <button type="submit" class="btnEnviar">Filtrar</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="search-container">
+        
+        <h1>Buscando por "{{filter}}"</h1>
+
+        {{section.recipes('site', 'card-info-container', recipes)}}
+        
+    </div>
+{% endblock %}

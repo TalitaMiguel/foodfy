@@ -1,0 +1,39 @@
+<div class="item">
+    <h3>Nome Completo</h3>
+    <div>
+        <input 
+            type="text"
+            name="name"
+            placeholder="Digite seu nome completo"
+            value="{{user.name}}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <h3>Email</h3>
+    <div class="input">
+        <input 
+            type="email"
+            name="email"
+            placeholder="Digite seu email"
+            value="{{user.email}}"
+            onblur="Validate.apply(this, 'isEmail')"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <h3>Senha</h3>
+    <div>
+        <input 
+            type="password"
+            name="password"
+            {% if not user.id %}
+                placeholder="Digite uma senha"
+            {% else %}
+                placeholder="Digite sua senha para atualizar seu cadastro"
+            {%endif%}
+        >
+    </div>
+</div>

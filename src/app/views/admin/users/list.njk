@@ -1,0 +1,32 @@
+{% extends "layouts/admin.njk" %}
+
+{% block content %}
+
+    <div class="users-header">
+        <h1>Usuários</h1>
+        <a href="/admin/users/create" >Novo</a>
+    </div>
+
+    <section class="users-container">
+        {% for user in users %}
+            <div class="user-card">
+                <h3>{{user.name}}</h3>
+                <h4>{{user.email}}</h4>
+
+                <div class="users-footer">
+                    <a href="/admin/users/{{user.id}}/edit">Editar</a>
+                    
+                    {% if user.id !== userId %}
+                        <form
+                            method="POST"
+                            action="/admin/users?_method=DELETE"
+                        >
+                            <input type="hidden" name="id" value="{{user.id}}">
+                            <button class="remove" type="submit">Remover</button>
+                        </form>
+                    {% endif %}
+                </div>
+            </div> 
+        {% endfor %}
+    </section>
+{% endblock %}

@@ -1,0 +1,161 @@
+/*** USER REGISTER ***/
+
+.user-register,
+.user-edit {
+    margin-top: 45px;
+}
+
+.user-register .fields,
+.user-edit .fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 0px;
+    grid-gap: 36px;
+}
+
+.user-register .fields .item input,
+.user-edit .fields .item input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 5px;
+    background: var(--white-color);
+    border: 1px solid var(--gray-light-color);
+    border-radius: 4px;
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.user-register .fields .item.checkbox {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: baseline;
+}
+
+/*** USER LIST PAGE ***/
+.users-header {
+    width: 1024px;
+}
+
+.users-header {
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    height: 30px;
+}
+
+.users-header h1 {
+    font-size: 24px;
+    color: var(--black-color);
+    align-self: center;
+}
+
+.users-header a {
+    width: 120px;
+    height: 30px;
+    font-size: 16px;
+    color: var(--white-color);
+    background: var(--purple-color);
+    border-radius: 4px;
+    justify-self: flex-end;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.users-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 40px 0px;
+    grid-gap: 40px;
+}
+
+.user-card {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+}
+
+.user-card h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--black-color);
+    text-transform: capitalize;
+}
+
+.user-card h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-color);
+    padding: 4px 0;
+    text-transform: lowercase;
+}
+
+.users-footer {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: baseline;
+}
+
+.users-footer a {
+    text-decoration: none;
+    color: var(--purple-color);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.users-footer .remove {
+    color: var(--red-color);
+    background: var(--white-color);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.users-footer .remove button:focus {
+    outline: none;
+}
+
+/*** USER EDIT PAGE ***/
+
+.user-edit .fields .item.checkbox {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    align-items: baseline;
+}
+
+.user-edit .fields .item input[type=checkbox] {
+    width: 20px;
+    box-sizing: border-box;
+    padding: 13px 5px;
+    background: var(--white-color);
+    border: 1px solid var(--gray-light-color);
+    border-radius: 4px;
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.users-header div{
+    justify-self: end;
+}
+
+.users-header .delete-btn {
+    width: 139px;
+    height: 37px;
+    font-size: 16px;
+    color: var(--white-color);
+    background: var(--red-color);
+    border-radius: 4px;
+    justify-self: flex-end;
+}
+
+.users-header .salvar-btn {
+    width: 139px;
+    height: 37px;
+    font-size: 16px;
+    color: var(--white-color);
+    background: var(--purple-color);
+    border-radius: 4px;
+    justify-self: flex-end;
+}

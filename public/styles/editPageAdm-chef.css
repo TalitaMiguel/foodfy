@@ -1,0 +1,47 @@
+/* === EDIT PAGE CHEF === */
+
+.wrapper-edit {
+    width: 1024px;
+    margin: 40px 0px;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    justify-items: end;
+    
+}
+
+.wrapper-edit h1 {
+    font-size: 24px;
+    color: #111111;
+    justify-self: flex-start;
+}
+
+.wrapper-edit .btn-chefEdit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnDelete {
+    width: 120px;
+    height: 30px;
+    font-size: 16px;
+    color: var(--white-color);
+    background: var(--red-color);
+    border-radius: 4px; 
+    margin-right: 8px;
+}
+
+.deleteMessage {
+    width: 530px;
+    color: var(--color-red-light);
+    padding-right: 8px;
+    text-align: center;
+    border: 1px solid var(--red-color);
+    padding: 4px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.deleteMessage small {
+    font-size: 15px;
+}

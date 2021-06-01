@@ -1,0 +1,73 @@
+.headerAdm {
+    width: 100%;
+    background: var(--black-color);
+}
+.headerAdm .container {
+    width: 1024px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: 150px 2fr 1fr;
+    align-items: center;
+    justify-items: flex-start;
+}
+
+.headerAdm .logo img {
+    width: 90px;
+    height: 27px;
+    padding: 6px;
+    border: 2px solid var(--gray-color);
+    border-radius: 4px;
+}
+
+.headerAdm .links {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.headerAdm .links a + a {
+    margin-left: 32px;
+}
+
+.headerAdm .links a {
+    text-decoration: none;
+    color: var(--white-color);
+    position: relative;
+}
+
+.headerAdm .links a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+.headerAdm .links a:hover::after {
+    width: 100%;
+    transition: width 200ms ease-in-out;
+}
+
+.headerAdm .links a.selected {
+    font-weight: 900;
+    color: var(--white-color);
+}
+
+.btnOut {
+    justify-self: end;
+    padding-right: 8px;
+}
+.btnOut button {
+    color: var(--white-color);
+    font-size: 15px;
+    font-weight: 400;
+    background: var(--black-color);
+    padding: 8px;
+    cursor: pointer;
+}
+
+.btnOut button:hover {
+    border: 1px solid var(--gray-color);
+    border-radius: 4px;
+}

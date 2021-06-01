@@ -1,0 +1,60 @@
+.show-Chef {
+    width: 1024px;
+}
+
+.show-Chef .wrapper {
+    margin: 8px 0px;
+}
+
+.show-Chef .details {
+    display: grid;
+}
+
+.show-Chef .details img {
+    margin: 0 auto;
+    height: 320px;
+    width: 320px;
+    justify-self: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px var(--black-color);
+    border: 2px solid var(--white-color);
+    object-fit: cover;
+
+}
+
+.show-Chef .details .author {
+    text-align: center;
+    font-weight: 500;
+}
+
+.show-Chef .details .author h1 {
+    font-size: 32px;
+    color: var(--black-color);
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+
+.show-Chef .details .author p {
+    font-size: 20px;
+    color: var(--gray-color);
+}
+
+.show-Chef .btnEditar {
+    width: 110px;
+    font-size: 16px;
+    color: var(--white-color);
+    background: var(--purple-color);
+    border-radius: 4px; 
+    text-align: center;
+    padding-top: 5px;
+    grid-column-end: none;
+    text-decoration: none;
+}
+
+/* cards recipes - page show */
+
+.show-Chef .cards {
+    margin: 0;
+}

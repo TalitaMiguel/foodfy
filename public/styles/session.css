@@ -1,0 +1,51 @@
+.login,
+.password {
+    width: 660px;
+    margin: 50px auto;
+}
+
+.login h1,
+.password h1 {
+    text-align: center;
+}
+
+.login .fields,
+.password .fields {
+    margin: 50px auto 30px;
+}
+
+.login .fields .item input,
+.password .fields .item input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 5px;
+    background: var(--white-color);
+    border: 1px solid var(--gray-light-color);
+    border-radius: 4px;
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.login .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.login .footer a {
+    text-decoration: none;
+    color: var(--gray-color);
+    font-weight: 500;
+}
+
+.login .footer a:hover {
+    color: var(--black-color);
+    font-weight: bold;
+}
+
+.password .btnRecuperar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}

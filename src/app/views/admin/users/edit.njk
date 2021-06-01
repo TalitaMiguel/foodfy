@@ -1,0 +1,38 @@
+{% extends "layouts/admin.njk" %}
+
+{% block content %}
+
+    <section class="user-edit">
+        <div class="users-header">
+            <h3>Atualizar Usuário</h3>
+            <div>
+                <button 
+                    class="delete-btn"
+                    type="submit"
+                    form="form-delete">Deletar
+                </button>
+                <button type="submit" form="form-save" class="salvar-btn">Salvar</button>
+            </div>
+        </div>
+
+        <form
+            id="form-delete"
+            method="post"
+            action="/admin/users?_method=DELETE"
+        >
+            <input type="hidden" name="id" value="{{ user.id }}">   
+        </form>
+        
+        <form
+            id="form-save"
+            method="POST"
+            action="/admin/users?_method=PUT"
+        >
+            <input type="hidden" name="id" value="{{ user.id }}">
+            <div class="fields">
+                {% include 'parts/create-user.njk' %}
+            </div>
+        </form>
+    </section> 
+    
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layouts/site.njk" %}
+
+{% block content %}
+
+    <section class="details">
+
+        <div class="card__detail">
+            <div class="card-detail-container">
+                <img 
+                    src="{{ recipe.files[0].src }}"
+                    alt="{{ recipe.author }}" 
+                >
+            </div>
+            <div class="card-detail-title">
+                <p>{{recipe.title}}</p>
+            </div>
+            <div class="card-detail-author">
+                <p>{{ recipe.author }}</p>
+            </div>
+        </div>
+
+        <div class="detail-ingredients">
+            <div class="detail-button-ingredients">
+                <h2>Ingredientes</h2>
+                <span class="button">ESCONDER</span>
+            </div>
+            <div class="recipe-hide-show">
+                <ul>
+                    {% for ingredient in recipe.ingredients %}
+                        <li> {{ingredient}}</li>
+                    {% endfor %}
+                </ul>
+            </div>   
+        </div>
+
+        <div class="detail-preparation">
+            <div class="detail-button-preparation">
+                <h2>Modo de preparo</h2>
+                <span class="button">ESCONDER</span>
+            </div>
+            <div class="recipe-hide-show">
+                <ul>
+                    {% for preparation in recipe.preparation %}
+                        <li> {{preparation}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="detail-information">
+            <div class="detail-button-information">
+                <h2>Informações adicionais</h2>
+                <span class="button">ESCONDER</span>
+            </div>
+            <div class="recipe-hide-show">
+                <p>{{recipe.information}}</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="/scripts/hideShowDetails.js"></script>
+
+{% endblock %}
+    

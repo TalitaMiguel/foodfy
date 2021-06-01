@@ -1,0 +1,41 @@
+<section class="form-create">
+    <div class="item">
+        <div>Nome</div>
+        <input 
+            type="text" 
+            name="name"
+            value="{{ chef.name }}"
+        >
+    </div>
+    
+    <div class="item">
+        <div>Avatar</div>
+        {% if chef.files %}
+            {% for image in chef.files %}
+                <div>
+                    <input
+                        class="input-create"
+                        type="text" 
+                        name="link da receita"
+                        value="{{image.name}}"
+                        disable
+                    >
+                </div>
+            {% endfor %}
+        {% endif %}
+   
+        <div id="avatar_upload">
+            <input 
+                id="avatar-input"
+                type="file"
+                name="photos"
+                accept="image/*"
+                onchange="AvatarUpload.selected(event)"
+            >
+            <p>Enviar Avatar</p>
+        </div>
+
+        <input type="hidden" name="avatar_photo">
+      
+    </div>      
+</section>

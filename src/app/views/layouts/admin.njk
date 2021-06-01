@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FOODFY</title>
+        {% include "parts/styles.njk" %}
+    </head>
+
+    <body>
+        <header class="headerAdm">
+            <div class="container">
+                <div class="logo">
+                    <img src="/images/logoAdm.png" alt="Logo Foodfy">
+                </div>
+                <div class="links">
+                    <a href="/admin/recipes">Receitas</a>
+                    <a href="/admin/chefs">Chefs</a>
+                    <a href="/admin/users/list">Usuários</a>
+                </div>
+                <div class="btnOut">
+                    <form id="form-logout" action="/admin/users/logout" method="POST">
+                        <button 
+                            type="submit" 
+                            form="form-logout"
+                            onclick="Message.confirmLogout()"
+                        >Sair</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        {% include "parts/messages.njk" %}
+
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+    
+    <script src="/scripts/headers.js"></script>
+    <script src="/scripts/scripts.js"></script>
+    <script src="/scripts/photosUpload.js"></script>
+    <script src="/scripts/addIngredientPreparation.js"></script>
+    
+</html>

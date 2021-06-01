@@ -1,0 +1,34 @@
+{% extends "layouts/admin.njk" %}
+
+{% block content %}
+
+    <div class="wrapper">
+        <h1>Gerenciar receitas</h1>
+        <a href="/admin/recipes/create">Novo</a>
+    </div>
+
+    <section class="cards-list">
+        {% for recipe in recipes %}
+            {% if recipe.user_id == userAdmin.userId %}
+                <div class="card-adm" id="{{recipe.id}}">
+                    <div class="card-image">
+                        <img src="{{recipe.img}}" alt="Receita {{recipe.title}}">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title">
+                            <p>{{recipe.title}}</p>
+                        </div>
+                        <div class="card-author">
+                            <p>por {{recipe.author}}</p>
+                        </div>
+                    
+                        <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+                        
+                    </div>
+                </div>   
+            {% endif %}
+        {% endfor %}
+    </section>
+
+{% endblock content %}
+
