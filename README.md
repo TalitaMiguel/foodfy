@@ -4,13 +4,13 @@
 
 <h1 align="center"> 🍽️ FoodFy - Bootcamp Launchbase </h1>
 
-<h4 align="center"><i>Site e admin para o gerenciamento de receitas. Realizado durante o curso Bootcamp LaunchBase da <a href="https:://rocketseat.com.br">Rocketseat!🚀</a></i></h4> 
+<h4 align="center"><i>Site e área restrita com login para o gerenciamento de receitas. Realizado durante o curso Bootcamp LaunchBase da <a href="https:://rocketseat.com.br">Rocketseat!🚀</a></i></h4> 
 
 </br></br>
 
 ## :memo: Descrição
 
-**Este trabalho foi desenvolvido como requisito para obtenção do certificado de conclusão do curso Bootcamp Launchbase da RocketSeat.
+**Este trabalho foi desenvolvido como requisito para conclusão do curso Bootcamp Launchbase da RocketSeat.
 Consiste em um site de gerenciamento de receitas com as seguintes funcionalidades:**
 
 * *Homepage com acesso livre as receitas e aos chefes;*
@@ -26,7 +26,7 @@ Consiste em um site de gerenciamento de receitas com as seguintes funcionalidade
 
 <img width="150px" align="right" alt="Desenho de um chef" src="public/images/chef.png" />
 
-**Abaixo seguem listadas algumas das tecnologias utilizadas nesse projeto:**
+**Seguem abaixo algumas das tecnologias utilizadas nesse projeto:**
 
 <br><br>
 
@@ -78,4 +78,4 @@ Consiste em um site de gerenciamento de receitas com as seguintes funcionalidade
 
 ## Agradecimentos <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="100px">
 
-*Gostaria de agradecer primeiramente a Jeová por me dar sabedoria, ao meu marido Kleber pela grande ajuda e incentivo durante o período em que realizei o curso, por me dar forças e apesar das dificuldades não me deixar desistir. Também gostaria de agradecer ao Mayk Brito e a Tamires Santos que fazem parte do time da Rocketseat, pela paciência, pela boa disposição e por me darem uma mãozinha quando eu realmente não sabia o que fazer.*
+*Gostaria de agradecer primeiramente a Jeová Deus, por me dar sabedoria, ao meu marido Kleber pela grande ajuda e incentivo durante o período em que realizei o curso, por me dar forças e apesar das dificuldades não me deixar desistir. Também gostaria de agradecer ao Mayk Brito e a Tamires Santos que fazem parte do time da Rocketseat, pela paciência, pela boa disposição e por me darem uma mãozinha quando eu realmente não sabia o que fazer.*
